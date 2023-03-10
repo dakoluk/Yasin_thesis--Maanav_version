@@ -4,6 +4,19 @@
 import numpy as np
 import pandas as pd
 
+import numpy as np
+import pickle
+import pandas as pd
+import sys
+import matplotlib.pyplot as plt
+import os
+
+module_path = os.path.abspath(os.path.join(".."))
+if module_path not in sys.path:
+    sys.path.append(module_path)
+
+from model.model_nile import ModelNile
+
 # Importing classes to generate the model
 from .model_classes import Reservoir, Catchment, IrrigationDistrict, HydropowerPlant
 from .smash import Policy
@@ -34,7 +47,7 @@ class ModelNile:
         as well as policy function hyper-parameters.
         """
 
-        self.read_settings_file("../settings/settings_file_Nile.xlsx")
+        self.read_settings_file("\Users\dakoluk\Desktop\master-thesis-project-main\nile_EMODPS_framework\settings\settings_file_Nile.xlsx")
 
         # Generating catchment and irrigation district objects
         self.catchments = dict()
