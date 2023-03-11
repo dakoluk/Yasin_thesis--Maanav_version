@@ -3,6 +3,7 @@
 
 import numpy as np
 import os
+import os.path
 import pandas as pd
 import sys
 import random
@@ -19,11 +20,13 @@ from ema_workbench.em_framework.optimization import (
 
 from data_generation import generate_input_data
 
+
+
 module_path = os.path.abspath(os.path.join(".."))
 if module_path not in sys.path:
     sys.path.append(module_path)
 from model.model_nile import ModelNile
-
+print(os.path.abspath(module_path))
 
 if __name__ == "__main__":
     ema_logging.log_to_stderr(ema_logging.INFO)
