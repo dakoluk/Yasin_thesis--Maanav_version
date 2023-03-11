@@ -1,3 +1,6 @@
+#Fixed path version.
+#Made suitable for HPCs
+
 # Exploring Trade-offs in Reservoir Operations through Many Objective Optimisation
 
 ## Case of Nile River Basin
